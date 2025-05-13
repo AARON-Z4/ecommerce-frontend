@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Store</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="logo">
+      <img src="icons/cart.png/clothing.png" alt="Brand Logo" />
+    </div>
+
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <input type="text" placeholder="Search..." class="search-bar" id="searchInput" />
+
+      <div class="cart">
+        <img src="icons/cart.png/trolley.png" alt="Cart" />
+        <span class="cart-badge">0</span>
+      </div>
+
+      <div class="hamburger" id="hamburger">☰</div>
+    </div>
+  </header>
+
+  <section class="filters">
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+    </select>
+
+    <select id="sortOption">
+      <option value="default">Sort By</option>
+      <option value="priceAsc">Price: Low to High</option>
+      <option value="priceDesc">Price: High to Low</option>
+      <option value="titleAsc">Title: A–Z</option>
+      <option value="titleDesc">Title: Z–A</option>
+    </select>
+  </section>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Biggest Sale of the Year!</h1>
+      <p>Up to 50% off on selected items. Don’t miss out!</p>
+      <a href="#products" class="cta-button">Shop Now</a>
+    </div>
+  </section>
+
+  <section class="product-grid" id="productGrid">
+    <!-- Products will be dynamically injected here -->
+  </section>
+
+  <div id="cart-modal" class="cart-modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <div class="cart-footer">
+        <button class="checkout-btn">Checkout</button>
+        <p>Total: $<span id="total-price">0.00</span></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>
